@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            body {
+                width:30%;
+                text-align: left;
+                margin:50px auto;
+                background-color: rgb(127, 214, 214);
+
+            }
+            button {
+                display:block;
+                width:100px;
+                height:30px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Body Mass Index</h1>
+        <lable for="height" >How tall are you?(m)</lable>
+        <input type="text" id="height">
+        <br/>
+        <br/>
+        <lable for="weight" >How much do you weigh?(Kg)</lable>
+        <input type="text" id="weight">
+        <br/>
+        <br/>
+        <br/>
+        <button onclick="bmi()">Calculate</button>
+        <br/>
+        <br/>
+        <span>Your BMI:</span>
+        <span id="result"></span>
+
+
+
+        <script>
+            function bmi() {
+                var x = document.getElementById("height").value
+                var y = document.getElementById("weight").value
+                var z = y/(x*x)
+                var result = document.getElementById("result")
+                result.innerHTML = z
+                
+                
+            }
+        </script>
+    </body>
+</html>
